@@ -1,10 +1,8 @@
-var header = $('.header');
-
-$(window).scroll(function() {
-    console.log($(window).scrollTop());
+/*$(window).scroll(function(e) {
     if ($(window).scrollTop() > 150) {
-            $('.header').stop(true, true).fadeOut(10000);
+            $('.header').stop(true, true).fadeOut();
         } else {
-            $('.header').stop(true, true).fadeIn(10000);
+            $('.header').stop(true, true).fadeIn();
         }
 });
+*/
