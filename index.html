@@ -26,21 +26,103 @@
     <div class="spacer center"></div>
     
     <div class="container center">
-        <div class="icons">
-            <img class="square" src="img/chef%20hat.png">
-            <img class="portrait" src="img/cricket.jpeg">
-            <img class="landscape" src="img/hammer%20&%20saw%20-%20media.png">
-            <img class="square" src="img/hiss-the-villian.jpg">
-            <img class="portrait" src="img/ivy-shambitt.png">
-            <img class="landscape" src="img/jt.jpg">
-            <img class="square" src="img/logo%20-%20media.png">
-            <img class="portait" src="img/victim.png">
+
+        <div class="column">
+           <div class="local">
+                <img class="image square" src="img/chef%20hat.png">
+                    <div class="tooltip">
+                        <p class="text">The original "Chef's Hat".</p>
+                    </div>
+            </div>
+            <div class="local">
+                <img class="image square" src="img/jt.jpg">
+                <div class="tooltip">
+                        <p class="text">Johnathan Thurston</p>
+                    </div>
+            </div>
         </div>
-    </div>
+        <div class="column">
+            <div class="local">
+                <img class="image landscape" src="img/hammer%20&%20saw%20-%20media.png">
+                <div class="tooltip">
+                        <p class="text">Business Card</p>
+                    </div>
+            </div>
+            <div class="local">
+                <img class="image square" src="img/logo%20-%20media.png">
+                <div class="tooltip">
+                        <p class="text">Carpentry Business - Logo</p>
+                    </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="local">
+                <img class="image square" src="img/hiss-the-villian.jpg">
+                <div class="tooltip">
+                        <p class="text">Hiss The Villian</p>
+                    </div>
+            </div>
+            <div class="local">
+                <img class="image square" src="img/ivy-shambitt.png">
+                <div class="tooltip">
+                        <p class="text">Ivy Shambitt</p>
+                    </div>
+            </div>
+
+            <div class="local">
+                <img class="image square" src="img/victim.png">
+                <div class="tooltip">
+                        <p class="text">Victim, Sidekick, Boyfriend, Me.</p>
+                    </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+
+        </div>
 
     <div class="footer">
 
     </div>
+
+    <script>
+        // Get the modal
+        var modal = $('#myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var modalImg = $('#img01');
+        var captionText = $('#caption');
+        $('.local').click (function(event){
+            var img = $(event.target).find('img').attr('src');
+            if (event.target.nodeName == "P") {
+                var local = $(event.target).parents('.local');
+                img = local.find('img').attr('src');
+            }
+            modalImg.attr('src', img);
+            var cap = $(this).find('p');
+            captionText.append(cap.text());
+            modal.css('display', 'block');
+        });
+
+        // Get the <span> element that closes the modal
+        var span = $('.close');
+
+        // When the user clicks on <span> (x), close the modal
+        $('.close').click(function() {
+            modal.css('display', 'none');
+            captionText.text("");
+        });
+    </script>
 
 </body>
 </html>

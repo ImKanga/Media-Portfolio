@@ -8,6 +8,7 @@ html, body {
     margin: 0;
     height: 100%;
     width: 100%;
+    background-color: paleturquoise;
 }
 
 img {
@@ -46,6 +47,10 @@ UTILS
 .center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.clearfix {
+    clear:both;
 }
 
 
@@ -90,7 +95,7 @@ NAV
 }
 
 .nav ul li {
-    margin-right: 40px;
+    margin-right: 55px;
     padding: 15px;
     border: 0.5px solid gray;
     border-radius: 6px;
@@ -98,22 +103,26 @@ NAV
     font-size: 24px;
     display: inline;
     transition: background-color 0.7s;
+    background-color: steelblue;
 }
 
 .nav ul li:hover {
-    background-color: black;
+    background-color: paleturquoise;
+}
 
+.nav ul li:hover > a {
+    color: black;
 }
 
 .nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
     transition: color 0.7s;
 }
 
 .nav ul li a:hover {
-    color: white;
+    color: black;
 }
 
 /*
@@ -122,36 +131,172 @@ BODY
 
 .container {
     width: 80%;
-    margin-top: 125px;
 }
 
-.container img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+.local {
+    position: relative;
+    width: 23%;
+    margin: 25px;
+    border: 0.8px #000000 solid;
+    padding: 35px;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
 }
 
-.icons {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.icons img {
-    margin: 20px 20px 20px 20px;
-    border: 1px solid black;
+.image {
+    opacity: 1;
     display: inline-block;
-    max-height: 600px;
-    max-width: 600px;
-}
-
-.icons img:nth-child(2) {
-    transform: rotate(90deg);
-    width: auto;
+    width: 100%;
     height: auto;
-
+    transition: .5s ease;
+    backface-visibility: hidden;
+    object-fit: contain;
 }
 
+/*
+TOOLTIP
+*/
+
+.tooltip {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.local:hover .image {
+    opacity: 0.3;
+}
+
+.local:hover .tooltip {
+    opacity: 1;
+}
+
+.text {
+    background-color: steelblue;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 235px;
+    text-align: center;
+}
+
+/*
+MODAL
+*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size: 32px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+   }
+}
 
 /*
 IMAGE TYPES
