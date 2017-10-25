@@ -135,9 +135,8 @@ BODY
 
 .local {
     position: relative;
-    width: 23%;
-    margin: 25px;
-    border: 0.8px #000000 solid;
+    width: 75%;
+    margin-bottom: 25px;
     padding: 35px;
     border-radius: 5px;
     float: left;
@@ -147,11 +146,8 @@ BODY
 .image {
     opacity: 1;
     display: inline-block;
-    width: 100%;
-    height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
-    object-fit: contain;
 }
 
 /*
@@ -269,12 +265,21 @@ MODAL
 /* Create four equal columns that floats next to each other */
 .column {
     float: left;
+    width: 27%;
     padding: 10px;
+    display: block;
 }
 
 .column img {
-    margin-top: 12px;
     width: 100%;
+    margin-top: 12px;
+}
+
+.row {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: auto;
 }
 
 /* Clear floats after the columns */
@@ -315,4 +320,18 @@ IMAGE TYPES
 .square {
     max-height: 450px;
     max-width: 450px;
+}
+
+/*
+FOOTER
+*/
+
+.footer {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.footer p {
+    font-family: Comfortaa, sans-serif;
+
 }
