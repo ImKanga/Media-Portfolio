@@ -1,9 +1,10 @@
 /*
 FONTS + HTML SETUP
 */
-@import url(https://fonts.googleapis.com/css?family=Kaushan+Script|Comfortaa|Pacifico);
 
-html, body {
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script|Comfortaa|Pacifico);
+html,
+body {
     padding: 0;
     margin: 0;
     height: 100%;
@@ -15,6 +16,7 @@ img {
     max-height: 100%;
     max-width: 100%;
 }
+
 
 /*
 UTILS
@@ -50,7 +52,23 @@ UTILS
 }
 
 .clearfix {
-    clear:both;
+    clear: both;
+}
+
+.heading {
+    padding: 50px 0 50px 0;
+    text-align: center;
+    display: block;
+    margin: 0;
+    font-size: 65px;
+    font-family: Kaushan Script, cursive;
+}
+
+.sub-heading {
+    text-align: center;
+    display: block;
+    font-family: Comfortaa, sans-serif;
+    font-size: 50px;
 }
 
 
@@ -63,21 +81,11 @@ HEADER
     height: 550px;
     padding-bottom: 250px;
 }
-.header h1 {
-    padding: 150px 0 50px 0;
-    text-align: center;
-    display: block;
-    margin: 0;
-    font-size: 65px;
-    font-family: Kaushan Script, cursive;
+
+#top-header {
+    padding-top: 150px;
 }
 
-.header h3 {
-    text-align: center;
-    display: block;
-    font-family: Comfortaa, sans-serif;
-    font-size: 50px;
-}
 
 /*
 NAV
@@ -125,6 +133,7 @@ NAV
     color: black;
 }
 
+
 /*
 BODY
 */
@@ -149,6 +158,7 @@ BODY
     transition: .5s ease;
     backface-visibility: hidden;
 }
+
 
 /*
 TOOLTIP
@@ -181,25 +191,37 @@ TOOLTIP
     text-align: center;
 }
 
+
 /*
 MODAL
 */
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
 }
 
+
 /* Modal Content (Image) */
+
 .modal-content {
     margin: auto;
     display: block;
@@ -207,7 +229,9 @@ MODAL
     max-width: 700px;
 }
 
+
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
+
 #caption {
     margin: auto;
     display: block;
@@ -220,8 +244,11 @@ MODAL
     font-size: 32px;
 }
 
+
 /* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
+
+.modal-content,
+#caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -229,16 +256,26 @@ MODAL
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
 }
 
 @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
 }
 
+
 /* The Close Button */
+
 .close {
     position: absolute;
     top: 15px;
@@ -256,13 +293,18 @@ MODAL
     cursor: pointer;
 }
 
+
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+
+@media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
     }
 }
+
+
 /* Create four equal columns that floats next to each other */
+
 .column {
     float: left;
     width: 27%;
@@ -282,26 +324,33 @@ MODAL
     width: auto;
 }
 
+
 /* Clear floats after the columns */
+
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
+
 /* Responsive layout - makes a two column-layout instead of four columns */
+
 @media (max-width: 800px) {
     .column {
         width: 50%;
     }
 }
 
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media (max-width: 600px) {
     .column {
         width: 100%;
-   }
+    }
 }
+
 
 /*
 IMAGE TYPES
@@ -322,6 +371,38 @@ IMAGE TYPES
     max-width: 450px;
 }
 
+
+/*
+CONTACT
+*/
+
+.contact {
+    margin-bottom: 50px;
+}
+
+.contact * {
+    display: inline-block;
+}
+
+.contact h1 {
+    display: block;
+}
+
+.contact p {
+    margin: 15px 25px;
+    font-size: 24px;
+}
+
+.links {
+    position: relative;
+    left: 40.5%;
+}
+
+.links a {
+    color: inherit;
+}
+
+
 /*
 FOOTER
 */
@@ -333,5 +414,29 @@ FOOTER
 
 .footer p {
     font-family: Comfortaa, sans-serif;
+}
 
+
+/*
+BACK TO TOP BUTTON
+*/
+
+#to-top {
+    background-color: steelblue;
+    display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    border-radius: 5px;
+}
+
+#to-top a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#to-top i {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
 }

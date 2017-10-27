@@ -1,112 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Dylan Logue - Portfolio</title>
     <link rel='stylesheet' href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="jquery.color-2.1.2.min.js" type="text/javascript"></script>
 </head>
-<body>
 
-    <div class="header">
-        <h1>Dylan Logue</h1>
+<body>
+    <div class="header" id="header-section">
+        <h1 class="heading" id="top-header">Dylan Logue</h1>
         <div class="down-spacer center"></div>
-        <h3>PORTFOLIO</h3>
+        <h3 class="sub-heading">PORTFOLIO</h3>
         <div class="up-spacer center"></div>
         <div class="nav">
             <ul>
-                <li id="about"><a href="#">About</a></li>
-                <li id="contact"><a href="#">Contact</a></li>
-                <li id="faq"><a href="#">FAQ</a></li>
+                <li id="about"><a href="#about-section">About</a></li>
+                <li id="contact"><a href="#contact-section">Contact</a></li>
+                <li id="faq"><a href="#faq-section">FAQ</a></li>
             </ul>
         </div>
     </div>
-
     <div class="spacer center"></div>
-    
     <div class="container center">
-
         <div class="row center">
-        <div class="column">
-           <div class="local">
-                <img class="image square" src="img/chef%20hat.png">
+            <div class="column">
+                <div class="local"> <img class="image square" src="img/chef%20hat.png">
                     <div class="tooltip">
                         <p class="text">The original "Chef's Hat".</p>
                     </div>
-            </div>
-            <div class="local">
-                <img class="image square" src="img/jt.jpg">
-                <div class="tooltip">
+                </div>
+                <div class="local"> <img class="image square" src="img/jt.jpg">
+                    <div class="tooltip">
                         <p class="text">Johnathan Thurston</p>
                     </div>
+                </div>
             </div>
-        </div>
-        <div class="column">
-            <div class="local">
-                <img class="image landscape" src="img/hammer%20&%20saw%20-%20media.png">
-                <div class="tooltip">
+            <div class="column">
+                <div class="local"> <img class="image landscape" src="img/hammer%20&%20saw%20-%20media.png">
+                    <div class="tooltip">
                         <p class="text">Business Card</p>
                     </div>
-            </div>
-            <div class="local">
-                <img class="image square" src="img/logo%20-%20media.png">
-                <div class="tooltip">
+                </div>
+                <div class="local"> <img class="image square" src="img/logo%20-%20media.png">
+                    <div class="tooltip">
                         <p class="text">Carpentry Business - Logo</p>
                     </div>
+                </div>
             </div>
-        </div>
-        <div class="column">
-            <div class="local">
-                <img class="image square" src="img/hiss-the-villian.jpg">
-                <div class="tooltip">
+            <div class="column">
+                <div class="local"> <img class="image square" src="img/hiss-the-villian.jpg">
+                    <div class="tooltip">
                         <p class="text">Hiss The Villian</p>
                     </div>
-            </div>
-            <div class="local">
-                <img class="image square" src="img/ivy-shambitt.png">
-                <div class="tooltip">
+                </div>
+                <div class="local"> <img class="image square" src="img/ivy-shambitt.png">
+                    <div class="tooltip">
                         <p class="text">Ivy Shambitt</p>
                     </div>
-            </div>
-
-            <div class="local">
-                <img class="image square" src="img/victim.png">
-                <div class="tooltip">
+                </div>
+                <div class="local"> <img class="image square" src="img/victim.png">
+                    <div class="tooltip">
                         <p class="text">Victim, Sidekick, Boyfriend, Me.</p>
                     </div>
+                </div>
             </div>
         </div>
-        </div>
-        </div>
-
-        <div id="myModal" class="modal">
-
-          <!-- The Close Button -->
-          <span class="close">&times;</span>
-
-          <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01">
-
-          <!-- Modal Caption (Image Text) -->
-          <div id="caption"></div>
-
-        </div>
-
-        <div class="spacer center"></div>
-
+    </div>
+    <div id="myModal" class="modal">
+        <!-- The Close Button --><span class="close">&times;</span>
+        <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+    <div class="spacer center"></div>
+    <div class="about" id="about-section">
+        <h1 class="heading">About Me</h1>
+        <h4 class="sub-heading">My name is Dylan Logue and this is my Media Portfolio.</h4> </div>
+    <div class="spacer center"></div>
+    <div class="contact" id="contact-section">
+        <h1 class="heading">Social Media</h1>
+        <div class="links"> <a href="https://facebook.com"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+            <p class="sub-heading">Dylan Logue</p> <a href="https://twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> </div>
+    </div>
+    <div class="spacer center"></div>
     <div class="footer">
         <p>Dylan Logue &copy; 2017</p>
     </div>
-
+    <div id="to-top"> <a href="#header-section"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a> </div>
     <script>
         // Get the modal
         var modal = $('#myModal');
-
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         var modalImg = $('#img01');
         var captionText = $('#caption');
-        $('.local').click (function(event){
+        $('.local').click(function (event) {
             var img = $(event.target).find('img').attr('src');
             console.log(img);
             if (event.target.nodeName == "P") {
@@ -118,17 +109,36 @@
             captionText.append(cap.text());
             modal.css('display', 'block');
         });
-
         // Get the <span> element that closes the modal
         var span = $('.close');
-
         // When the user clicks on <span> (x), close the modal
-        $('.close').click(function() {
+        $('.close').click(function () {
             modal.css('display', 'none');
             captionText.text("");
             modalImg.src = "";
         });
+        // SMOOTH SCROLL
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 650, 'swing');
+            });
+            // #TO-TOP, on scroll appear
+            $(document).on('scroll', function (e) {
+                var button = $("#to-top");
+                if (document.body.scrollTop < 50) {
+                    button.stop(true, false).fadeOut('500');
+                }
+                else {
+                    button.stop(true, false).fadeIn('500');
+                }
+            });
+        });
     </script>
-
 </body>
+
 </html>
