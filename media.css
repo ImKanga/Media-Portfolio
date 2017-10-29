@@ -1,0 +1,25 @@
+@media (max-width: 800px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nav ul li {
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
